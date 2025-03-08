@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test.only('Add order to cart' , async({page}) =>
+test('Add order to cart' , async({page}) =>
 {
     const email = "anshika@gmail.com";
     const pwd = "Iamking@000";
