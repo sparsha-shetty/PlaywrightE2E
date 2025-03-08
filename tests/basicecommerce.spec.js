@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test('Add order to cart' , async({page}) =>
+test.only('Add order to cart' , async({page}) =>
 {
     const email = "anshika@gmail.com";
     const pwd = "Iamking@000";
@@ -20,9 +20,9 @@ test('Add order to cart' , async({page}) =>
     const titles = await page.locator(".card-body b").allTextContents();
     console.log('Titles of the product ',titles);
 
-    const count = products.count();
+    const count = await products.count();
 
-    for(let i = 0; i<count ; i++)
+    for(let i = 0; i<count ; ++i)
     {
         if(await products.nth(i).locator("b").textContent() == productName)
         {
@@ -35,7 +35,7 @@ test('Add order to cart' , async({page}) =>
    //await page.pause();
  
    await page.locator("div li").first().waitFor();
-   const bool = await page.locator("h3:has-text('zara coat 3')").isVisible();
+   const bool = await page.locator("h3:has-text('ZARA COAT 3')").isVisible();
    expect(bool).toBeTruthy();
    await page.locator("text=Checkout").click();
  
