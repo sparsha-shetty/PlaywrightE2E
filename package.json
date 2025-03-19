@@ -2,13 +2,21 @@
   "name": "playwrighte2e",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression":"npx playwright test",
+    "demo-basics": "npx playwright  test --grep @demo",
+    "spl-locators":"npx playwright test --grep @spl"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.8"
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.8",
+    "allure-playwright": "^3.2.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
   }
 }

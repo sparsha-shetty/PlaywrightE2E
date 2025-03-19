@@ -1,0 +1,324 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Visual regression case
+- Location: D:\PlaywrightE2E\tests\uibasics.spec.js:83:9
+
+# Error details
+
+```
+Error: expect(Buffer).toMatchSnapshot(expected)
+
+  279890 pixels (ratio 0.31 of all image pixels) are different.
+
+Expected: D:\PlaywrightE2E\tests\uibasics.spec.js-snapshots\flightpage-win32.png
+Received: D:\PlaywrightE2E\test-results\uibasics-Visual-regression-case\flightpage-actual.png
+    Diff: D:\PlaywrightE2E\test-results\uibasics-Visual-regression-case\flightpage-diff.png
+
+    at D:\PlaywrightE2E\tests\uibasics.spec.js:87:42
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "FlightAware logo":
+    - img "FlightAware logo"
+  - navigation:
+    - list:
+      - listitem:
+        - group: Products
+      - listitem:
+        - group: Industries
+      - listitem:
+        - group: ADS-B
+      - listitem:
+        - group: Flight Tracking
+  - navigation:
+    - list:
+      - listitem:
+        - group
+  - link "Sign In"
+  - link "Join for free"
+- main:
+  - link "hero background Photo by Talon6":
+    - img "hero background"
+    - img
+    - text: Photo by Talon6
+  - heading "FlightAware is Central to Aviation" [level=1]
+  - img
+  - textbox
+  - text: Search for flight
+  - region "Map"
+  - link "© OpenStreetMap"
+  - button "Zoom in button":
+    - img "Zoom in button"
+  - button "Zoom out button":
+    - img "Zoom out button"
+  - heading "Connect our global flight map to your digital platforms." [level=2]
+  - link "Optimize your experience":
+    - text: Optimize your experience
+    - img
+  - heading "Innovative products powered by best-in-class data." [level=2]
+  - heading "Elevate your business with AI-assisted technology from FlightAware Foresight." [level=3]
+  - link "Learn more about FlightAware Foresight":
+    - text: Learn more about FlightAware Foresight
+    - img
+  - img "Elevate your business with AI-assisted technology from FlightAware Foresight."
+  - heading "Delivering data to developers on demand." [level=2]
+  - heading "AeroAPI is a robust, query-based API giving developers access to a huge amount of FlightAware’s current and historical data." [level=3]
+  - link "Integrate AeroAPI into your platform":
+    - text: Integrate AeroAPI into your platform
+    - img
+  - heading "Unlock real-time global flight tracking and ADS-B flight data." [level=2]
+  - heading "Tap into the data feed inside FlightAware Firehose to access the status and information for all flights on the ground and in the air." [level=3]
+  - link "Discover more about FlightAware Firehose":
+    - text: Discover more about FlightAware Firehose
+    - img
+  - link "See all products":
+    - text: See all products
+    - img
+  - heading "Secure, private fleet tracking." [level=2]
+  - heading "Keep track of every aircraft in your private fleet—including helicopters—with customized monitoring packages tailored to operations of any size." [level=3]
+  - heading "Compare tiers" [level=4]:
+    - link "Compare tiers":
+      - text: Compare tiers
+      - img
+  - heading "Watch the world take flight." [level=2]
+  - heading "Explore dynamic photos of aircraft taken and shared by the FlightAware community." [level=3]
+  - img "Airbus A320 (EC-MQE)"
+  - img "Cessna Caravan (N558EX)"
+  - img "Gulfstream Aerospace Gulfstream G650 (N312AT)"
+  - img "Warbirds"
+  - img "Piper Tomahawk with Dog"
+  - img "Boeing 747-400 (PH-BFG)"
+  - img "Boeing 757-200"
+  - img "Boeing 777-200 (N852FD)"
+  - img "De Havilland Mosquito (N474PZ)"
+  - img "Boeing 787-8 (N787BA)"
+  - img "Canadair CL-415 SuperScooper (N385AC)"
+  - img "TFL3131"
+  - heading "See all photos" [level=4]:
+    - link "See all photos":
+      - text: See all photos
+      - img
+  - heading "Worldwide tracking, in your hands." [level=2]
+  - paragraph: Download the FlightAware app to stay up to date on the go.
+  - img "apps-qr-code"
+  - switch "iOS Android" [checked]
+  - img "ios-center"
+  - heading "Customize your tracking." [level=2]
+  - paragraph: Create your free FlightAware account and unlock real-time tracking, custom alerts, and more.
+  - link "Sign up"
+- contentinfo:
+  - img "FlightAware logo"
+  - navigation:
+    - heading "About" [level=6]
+    - list:
+      - listitem:
+        - link "About FlightAware"
+      - listitem:
+        - link "Newsroom"
+      - listitem:
+        - link "Advertise With Us"
+      - listitem:
+        - link "Careers"
+      - listitem:
+        - link "Webinars"
+      - listitem:
+        - link "Blog"
+      - listitem:
+        - link "Engineering Blog"
+      - listitem:
+        - link "Store"
+  - navigation:
+    - heading "Community" [level=6]
+    - list:
+      - listitem:
+        - link "Squawks"
+      - listitem:
+        - link "Discussion"
+      - listitem:
+        - link "Photos"
+      - listitem:
+        - link "ADS-B Statistics"
+  - navigation:
+    - heading "Tracking" [level=6]
+    - list:
+      - listitem:
+        - link "Flight Finder"
+      - listitem:
+        - link "IFR Route Analyzer"
+  - navigation:
+    - heading "Products" [level=6]
+    - list:
+      - listitem:
+        - link "AeroAPI"
+      - listitem:
+        - link "FlightAware Firehose"
+      - listitem:
+        - link "FlightAware Foresight"
+      - listitem:
+        - link "Rapid Reports"
+      - listitem:
+        - link "Custom Reports"
+      - listitem:
+        - link "Integrated Maps"
+      - listitem:
+        - link "FlightAware Aviator"
+      - listitem:
+        - link "FlightAware Global"
+      - listitem:
+        - link "FlightAware FBO Toolbox"
+      - listitem:
+        - link "FlightAware TV℠"
+      - listitem:
+        - link "GlobalBeacon"
+      - listitem:
+        - link "ADS-B Receivers"
+  - navigation:
+    - heading "Customer Service" [level=6]
+    - list:
+      - listitem:
+        - link "FAQs"
+      - listitem:
+        - link "Contact Us"
+  - link "Get our mobile apps"
+  - navigation:
+    - list:
+      - listitem:
+        - link "Facebook"
+      - listitem:
+        - link "Instagram"
+      - listitem:
+        - link "LinkedIn"
+      - listitem:
+        - link "X"
+  - separator
+  - navigation:
+    - list:
+      - listitem: © 2025 FlightAware
+      - listitem:
+        - text: /
+        - link "Privacy"
+      - listitem:
+        - text: /
+        - link "Terms of Use"
+      - listitem:
+        - text: /
+        - link "Manage Preferences"
+- alert
+- region "Cookie banner":
+  - dialog "Information About Your Privacy":
+    - heading "Information About Your Privacy" [level=2]
+    - text: We and our 877 partners store and access personal data, like browsing data or unique identifiers, on your device. Selecting "I Accept" enables tracking technologies to support the purposes shown under "we and our partners process data to provide," whereas selecting "Reject All" or withdrawing your consent will disable them. If trackers are disabled, some content and ads you see may not be as relevant to you. You can resurface this menu to change your choices or withdraw consent at any time by clicking the ["privacy preferences"] link on the bottom of the webpage [or the floating icon on the bottom-left of the webpage, if applicable]. Your choices will have effect within our Website. For more details, refer to our Privacy Policy.
+    - link "Legal Information, opens in a new tab": Privacy Statement
+    - heading "We and our partners process data to provide:" [level=3]
+    - paragraph:
+      - text: Use precise geolocation data. Actively scan device characteristics for identification. Store and/or access information on a device. Personalised advertising and content, advertising and content measurement, audience research and services development.
+      - button "List of Partners (vendors)"
+    - button "I Accept"
+    - button "Reject All"
+    - button "Show Purposes"
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from '@playwright/test';
+   2 | import { snapshot } from 'node:test';
+   3 |
+   4 | test.describe.configure({mode: 'parallel'}); // run in parallel for each test suite. If project level mention in config file workers:2
+   5 |
+   6 | test('Login to practise page', async ({page}) =>
+   7 | {
+   8 |  await page.goto("https://rahulshettyacademy.com/client");
+   9 |  console.log(await page.title());
+  10 |  await page.locator("#userEmail").fill("sparsha.seetharam@gmail.com");
+  11 |  await page.locator("#userPassword").fill("Shetty@89");
+  12 |  await page.locator("#login").click();
+  13 |  await page.locator(".card-body b").first().waitFor();
+  14 |  const titles = await page.locator(".card-body b").allTextContents();
+  15 |  console.log(titles); 
+  16 |  
+  17 | });
+  18 |
+  19 |
+  20 |
+  21 | //handling child windows (multi tabs)
+  22 | test('Child window handle', async ({browser})=>
+  23 | {
+  24 |     const context = await browser.newContext();
+  25 |     const page = await context.newPage();
+  26 |     const username = page.locator('#username');
+  27 |     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+  28 |     await page.locator("#username").fill("rahulshettyacademy");
+  29 |     await page.locator("#password").fill("learning");
+  30 |     await page.locator("")
+  31 |     // await page.locator(("#signInBtn").click();
+  32 |     const documentLink = page.locator("[href*='documents-request']");
+  33 |    
+  34 |     const [newPage] = await Promise.all([
+  35 |     
+  36 |     context.waitForEvent('page'), //listen for new page with pending,rejected,fulfilled state
+  37 |     documentLink.click(),
+  38 |     ])
+  39 |
+  40 | const newPage2 = Promise.all([
+  41 |
+  42 |     context.waitForEvent('page'),
+  43 |     documentLink.click(),
+  44 |
+  45 | ])
+  46 |
+  47 |     console.log(await newPage.locator(".red").textContent());
+  48 | });
+  49 |
+  50 |
+  51 |     test('Playwright special locatrors', async({page}) =>
+  52 |     {
+  53 |         await page.goto("https://rahulshettyacademy.com/angularpractice/");
+  54 |         await page.getByLabel("Check me out if you Love IceCreams!").check();
+  55 |         await page.getByLabel("Gender").selectOption("Female");
+  56 |         await page.getByLabel("Employed").click();
+  57 |         await page.getByPlaceholder("Password").fill("Password");
+  58 |         await page.getByRole("button", {name: 'Submit'}).click();
+  59 |
+  60 |         await page.getByText("Success! The Form has been submitted successfully!.").isVisible();
+  61 |         await page.getByRole("link",{name : "Shop"}).click();
+  62 |
+  63 |         await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
+  64 |        
+  65 |         //handdle alert pop ups
+  66 |
+  67 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  68 |         await page.goBack();
+  69 |         await page.goForward();
+  70 |
+  71 |         await expect(page.locator("#displayed-text")).toBeVisible();
+  72 |         await page.locator("#hide-textbox").click();
+  73 |         await page.screenshot({path: 'Clickedimage.png'});
+  74 |         expect (await page.screenshot()).toMatchSnapshot
+  75 |         await page.pause();
+  76 |         page.on('dialog', dialog => dialog.dismiss());
+  77 |         await page.locator("#confirmbtn").click();
+  78 |
+  79 |         page.close();
+  80 |
+  81 |     }); 
+  82 |
+  83 |     test('Visual regression case',async ({page})=>
+  84 |     {
+  85 |
+  86 |         await page.goto("https://www.flightaware.com");
+> 87 |         expect (await page.screenshot()).toMatchSnapshot('flightpage.png');
+     |                                          ^ Error: expect(Buffer).toMatchSnapshot(expected)
+  88 |
+  89 |
+  90 |     })
+```
