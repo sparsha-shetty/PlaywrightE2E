@@ -1,5 +1,5 @@
 import {test, expect} from '@playwright/test'
-import { LoginPage } from '../pageobjects/loginpage';
+import { LoginPage } from '../pageobjects/LoginPage';
 import {customtest} from '../Utils/testbase';
 
 const dataset = JSON.parse(JSON.stringify(require("../Utils/placeordertestdata.json")));
