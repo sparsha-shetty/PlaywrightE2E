@@ -12,9 +12,8 @@ Sample Test Cases: Includes example tests for reference and quick start.​
 GitHub
 
 📁 Project Structure
-graphql
-Copy
-Edit
+
+```
 PlaywrightE2E/
 ├── .github/
 │   └── workflows/          # CI/CD workflows for GitHub Actions
@@ -30,6 +29,7 @@ PlaywrightE2E/
 ├── package.json            # Project metadata and dependencies
 ├── playwright.config.js    # Playwright configuration
 └── state.json              # Playwright state (e.g., authentication)
+
 🛠️ Installation
 Prerequisites
 Node.js (v14 or higher)
@@ -80,6 +80,7 @@ Edit
 npm run allure:report
 ⚙️ CI/CD with GitHub Actions
 The project includes a GitHub Actions workflow located at .github/workflows/. This workflow automates the testing process on code pushes and pull requests.​
+```
 
 📄 License
 This project is licensed under the MIT License.​
